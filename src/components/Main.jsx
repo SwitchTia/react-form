@@ -2,45 +2,55 @@ import { use, useState } from 'react'
 
 
 function App() {
-  const [newProduct, setNewProduct] = useState('New product');
+    const [newProduct, setNewProduct] = useState('New product');
 
 
-  function changeHandler(event) {
-    const value = event.target.value;
-    const name = event.target.name;
+    function changeHandler(event) {
+        const value = event.target.value;
+        const name = event.target.name;
 
-    if (name === 'name') {
-      setNewProduct(value);
-    } 
-  }
+        if (name === 'name') {
+            setNewProduct(value);
+        }
+    }
 
-  function submitHandler(event) {
-    event.preventDefault();
-  }
+    function submitHandler(event) {
+        event.preventDefault();
+    }
 
-  return (
-    <>
-      <h1>{newProduct}</h1>
-      
-      <form onSubmit={submitHandler}>
+    return (
+        <>
+            <main>
+                <div className='container'>
+                    <h2>Product 1</h2>
+                    <h2>Product 2</h2>
+                    <h2>Product 3</h2>
+                    <h2>Product 4</h2>
+                    {/* need to do a list and map it later */}
 
-        <label htmlFor="nome">Add to the list:
+                    <h2>{newProduct}</h2>
 
-          <input id="nome"
-            type="text"
-            name="name"
-            value={newProduct}
-            onChange={changeHandler} />
+                    <form onSubmit={submitHandler}>
 
-        </label>
-        
-        <button className='' type="submit">
-          Submit
-        </button>
+                        <label htmlFor="nome">Add to the list:
 
-      </form>
-    </>
-  )
+                            <input className='mx-10' id="name"
+                                type="text"
+                                name="name"
+                                value={newProduct}
+                                onChange={changeHandler} />
+
+                        </label>
+
+                        <button className='btn' type="submit">
+                            Submit
+                        </button>
+
+                    </form>
+                </div>
+            </main>
+        </>
+    )
 }
 
 export default App

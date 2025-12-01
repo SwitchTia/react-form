@@ -9,13 +9,13 @@ header {
   background-color: rgb(255, 228, 196);
 }
 main {
-  background-color: rgb(234, 253, 247);
+  background-color: rgb(155, 206, 190);
   padding-top: 30px;
   height: 700px;
 }
 
 .container {
-  width: 90%;
+  width: 80%;
   max-width: 900px;
   margin: 30px auto;
 }
@@ -42,7 +42,7 @@ main {
 }
 
 .btn {
-  background-color: rgb(168, 201, 240);
+  background-color:rgb(255, 228, 196);
   border:rgb(32, 123, 243);
   text-transform: uppercase;
 
